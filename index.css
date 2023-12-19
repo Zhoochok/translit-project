@@ -1,0 +1,190 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Courier New', Courier, monospace
+}
+
+.main {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.header{
+font-size: 50px;
+font-weight: 730;
+text-align: center;
+color: rgba(69, 32, 171, 1);
+padding-top: 60px;
+padding-bottom: 60px;
+}
+
+.input_container{
+   position: relative;
+}
+
+.input {
+border-radius: 14px;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+text-align: left;
+width: 500px;
+height: 56px;
+padding: 10px;
+}
+
+.button {
+   border-radius: 6px;
+   background-color: rgba(69, 32, 171, 1);
+   color: white;
+   width: 107px;
+   height: 38px;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   cursor: pointer;
+}
+
+.word_container {
+   border-color: black;
+   width: 500px;
+   margin-top: 30px;
+   margin-bottom: 40px;
+   display: flex;
+   justify-content:space-between;
+
+}
+
+.rus, .eng {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 100%;
+ }  
+
+.rus{
+   align-self: flex-start;
+   background-color: rgba(240, 240, 240, 1);    
+   border-radius: 8px 0 0 8px;
+}
+
+.eng{
+   background-color: #C4C4C4;
+   border-radius: 0 8px 8px 0;
+   position: relative;
+}
+
+.rus_word,
+.eng_word {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: relative;
+ height: 50px;
+ width: 100%;
+}
+
+.rus_word{
+   border-right: 3px solid #111111;
+   display: flex;
+   justify-content: flex-start;
+}
+
+
+.index {
+ margin-left: 12px;
+ color: black;
+ font-weight: 600;
+ letter-spacing: -0.7px;
+}
+
+.word,
+.translit {
+ margin-left: 12px;
+ margin-right: 11px;
+ letter-spacing: -0.54px;
+ flex-grow: 2;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ max-width: 10ch;
+}
+
+.delete {
+   margin-right: 11px;
+   width: 18px;
+   position: absolute;
+   right: 10px;
+
+ }
+
+.clear {
+   display: flex;
+   justify-content: space-around;
+   width: 300px;
+   height: 38px;
+   background-color:rgba(69, 32, 171, 1);
+   color: white;
+   padding: 8px 10px;
+   font-size: 18px;
+   border-radius: 8px;
+   border: 0;
+ }
+
+ .clear-icon {
+   width: 24px;
+   
+ }
+
+ .tooltip {
+   background-color: rgba(69, 32, 171, 1);
+   font-style: italic;
+   color: white;
+   padding: 3px;
+   border-radius: 7px;
+   display: none;
+   position: absolute;
+   top: 33px;
+   z-index: 1; 
+   border: 2px solid black;
+   
+ }
+
+@media (max-width: 550px) {
+   .header {
+       width: 400px;
+       height: 47px;
+       top: 20px;
+       left: 26px;
+       font-size: 36px;
+       font-weight: 600;
+       line-height: 47px;
+       text-align: center;
+       margin: 0 auto ;
+   }
+   
+   .word, .translit {
+      width: 100%;
+      max-width: 360px;
+      font-size: 14px;
+   }
+   
+   .input{
+       width: 340px;
+       font-size: 16px;
+   }
+
+   .button {
+       top: 7px;
+       right: 7px;
+   }
+
+   .word_container{
+       width: 330px;
+       max-width: 360px;
+       
+   }
+}
